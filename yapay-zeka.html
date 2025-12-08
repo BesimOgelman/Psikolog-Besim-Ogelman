@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapay Zeka - Besim Ogelman</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header class="main-header">
+		<div class="container">
+			<a href="index.html" class="logo">Psikolog Besim Ogelman</a>
+			<nav class="main-nav">
+				<a href="index.html#about">Hakkımda</a>
+				<a href="modeller.html">Modeller</a>
+				<a href="egitim.html">Eğitimler</a>
+                <a href="yapay-zeka.html" class="active">Yapay Zeka</a>
+				<a href="index.html#contact">İletişim</a>
+			</nav>
+		</div>
+	</header>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Yapay Zeka Projeleri ve Eğitimleri</h2>
+            
+            <div class="project-item">
+                <div class="project-meta">Kamu & Teknoloji</div>
+                <h3>Yapay Zeka ve Geleceğin Yetkinlikleri</h3>
+                <p>T.C. Bilgi Teknolojileri Kurumu (BTK) işbirliği ile Yapay Zeka Eğitimcinin Eğitimi Programı tamamlanmış, Sinop DENEYAP atölyelerinde geleceğin mühendislerine tasarım ve üretim odaklı rehberlik edilmiştir.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-meta">Girişimcilik Ekosistemi</div>
+                <h3>350+ Girişimcilik Programı</h3>
+                <p>KOSGEB, İŞKUR ve Kalkınma Ajansları işbirliğiyle Türkiye genelinde 20.000'den fazla kişiye Uygulamalı Girişimcilik eğitimi verilmiş, yüzlerce yeni işletmenin kurulmasına öncülük edilmiştir.</p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-meta">Özel Sektör</div>
+                <h3>Kurumsal Dönüşüm ve İK</h3>
+                <p>Tofaş Akademi, İnci Holding, Dr. Oetker gibi global ve yerel devlere yaratıcılık, takımdaşlık ve stres yönetimi eğitimleri verilmiş; 40.000 saati aşan bir eğitim deneyimi ile kurumsal kültür inşasına katkı sağlanmıştır.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-outputs" style="background-color: var(--secondary-bg);">
+        <div class="container">
+            <h2 style="text-align: center;">Fikir ve Ürün Çıktıları</h2>
+            <div class="card-container">
+                <div class="ai-card">
+                    <h3>Yapay Zeka ile Fikirden Ürüne</h3>
+                    <p>Yapay zeka araçları, soyut fikirlerin somut ürünlere ve hizmetlere dönüşümünü hızlandırır. Metin, görsel, kod ve strateji üreterek inovasyon süreçlerinde maliyetleri düşürür ve verimliliği artırır.</p>
+                    <img src="Fotoğraflar/Fikir ve ürünlerin Çıktıları.png" alt="Yapay zeka ile fikir ve ürün çıktıları">
+                </div>
+                <div class="ai-card">
+                    <img src="Fotoğraflar/YZ 4 resim.png" alt="Yapay zeka 4 resim" class="yeni-resim">
+                    <h3>Hayatın Her Alanında</h3>
+                    <p>Yapay zeka, günlük yaşamdan iş dünyasına, sağlıktan eğitime kadar her alanda devrim yaratmaya devam ediyor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

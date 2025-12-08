@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modeller - Besim Ogelman</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header class="main-header">
+		<div class="container">
+			<a href="index.html" class="logo">Psikolog Besim Ogelman</a>
+			<nav class="main-nav">
+				<a href="index.html#about">Hakkımda</a>
+				<a href="modeller.html" class="active">Modeller</a>
+				<a href="egitim.html">Eğitimler</a>
+                <a href="yapay-zeka.html">Yapay Zeka</a>
+				<a href="index.html#contact">İletişim</a>
+			</nav>
+		</div>
+	</header>
+
+    <section id="models" style="background-color: var(--secondary-bg);">
+        <div class="container">
+            <h2>İmza Modellerim</h2>
+            <p style="max-width: 700px;">Teori ile pratik arasındaki boşluğu doldurmak için geliştirdiğim ve Türkiye'de tek uygulayıcısı olduğum özgün metodolojiler.</p>
+            
+            <div class="models-grid">
+                <div class="model-card">
+                    <h3>FEBEFEK® Yaratıcı Düşünme Modeli</h3>
+                    <img src="Fotoğraflar/FEBEFEK.png" alt="FEBEFEK Yaratıcı Düşünme Modeli" style="width:100%; max-width:600px; margin-top:20px;">
+                    <p>Yaratıcılık ve İnovasyon alanında geliştirdiğim bu model, iş fikirlerinin başarı formülünü yapılandırır. Fikirden eyleme, eylemden ticarileşmeye giden yolda zihinsel engelleri aşmayı ve sistematik inovasyonu sağlar. Türkiye'de bu alanda çalışan tek uzman olarak tescilli modelimi girişimciler ve kurumlarla paylaşıyorum.</p>
+                </div>
+
+                <div class="model-card">
+                    <h3>ANKA İletişim ve Yaşam Modeli</h3>
+                    <p>Küllerinden yeniden doğmayı simgeleyen ANKA modeli, bireylerin ve kurumların iletişim krizlerinden, stres yüklü süreçlerden güçlenerek çıkmasını hedefler. Psikolojik dayanıklılık, etkili iletişim ve takımdaşlık kültürünü merkeze alan bütünsel bir yaklaşım sunar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

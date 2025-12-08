@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitimler - Besim Ogelman</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header class="main-header">
+		<div class="container">
+			<a href="index.html" class="logo">Psikolog Besim Ogelman</a>
+			<nav class="main-nav">
+				<a href="index.html#about">Hakkımda</a>
+				<a href="modeller.html">Modeller</a>
+				<a href="egitim.html" class="active">Eğitimler</a>
+                <a href="yapay-zeka.html">Yapay Zeka</a>
+				<a href="index.html#contact">İletişim</a>
+			</nav>
+		</div>
+	</header>
+
+    <section id="services" style="background-color: var(--secondary-bg);">
+        <div class="container">
+            <h2>Eğitim ve Danışmanlık Alanları</h2>
+            <div class="egitim-grid">
+                <div class="egitim-card">
+                    <h3>Tasarım Odaklı Düşünme</h3>
+                    <p>Kullanıcı ihtiyaçlarını merkeze alarak yenilikçi çözümler üretme sürecidir. Empati, prototipleme ve test etme adımlarıyla problem çözme becerilerini geliştirir.</p>
+                    <img src="Fotoğraflar/Tasarım Odaklı Düşünme.png" alt="Tasarım Odaklı Düşünme">
+                </div>
+                <div class="egitim-card">
+                    <h3>Yaratıcılık Atölyesi</h3>
+                    <p>Bireysel ve takım yaratıcılığını tetikleyen, farklı düşünme tekniklerinin (SCAMPER, beyin fırtınası vb.) uygulamalı olarak deneyimlendiği bir atölye çalışmasıdır.</p>
+                    <img src="Fotoğraflar/Yaratıcılık Atölyesi.png" alt="Yaratıcılık Atölyesi">
+                </div>
+                <div class="egitim-card">
+                    <h3>Yapay Zeka Okuryazarlığı</h3>
+                    <p>Yapay zekanın temel kavramlarını, iş dünyasındaki uygulamalarını ve getirdiği fırsatları anlamaya yönelik bir eğitimdir.</p>
+                </div>
+                <div class="egitim-card">
+                    <h3>İnovasyon Yönetimi</h3>
+                    <p>Kurum içinde inovasyon kültürünü oluşturma, fikirleri toplama, değerlendirme ve hayata geçirme süreçlerini yönetme becerilerini kapsar.</p>
+                </div>
+                <div class="egitim-card">
+                    <h3>Kurumsal Gelişim</h3>
+                    <p>Takımdaşlık, kriz yönetimi, insan kaynakları süreçleri ve kurumsallaşma gibi konularda danışmanlık ve eğitimler.</p>
+                </div>
+                <div class="egitim-card">
+                    <h3>Kişisel Yetkinlikler</h3>
+                    <p>Stres yönetimi, problem çözme, zaman yönetimi ve etkili iletişim gibi bireysel verimliliği artıran yetkinlikler.</p>
+                </div>
+                 <div class="egitim-card">
+                    <h3>Girişimcilik ve Proje</h3>
+                    <p>KOBİ danışmanlığı, proje döngüsü yönetimi (PCM), iş modeli geliştirme ve AB projeleri hazırlama konularını içerir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

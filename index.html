@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besim Ogelman | Endüstriyel Psikolog & İnovasyon Uzmanı</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header class="main-header">
+		<div class="container">
+			<a href="index.html" class="logo">Psikolog Besim Ogelman</a>
+			<nav class="main-nav">
+				<a href="#about">Hakkımda</a>
+				<a href="modeller.html">Modeller</a>
+				<a href="egitim.html">Eğitimler</a>
+                <a href="yapay-zeka.html">Yapay Zeka</a>
+				<a href="#contact">İletişim</a>
+			</nav>
+		</div>
+	</header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="tagline">Psikolog • Eğitmen • İnovasyon Uzmanı</span>
+            <h1>İnsana Dair Her Şeyde,<br>Yaratıcılık ve İnovasyonla.</h1>
+            <p>Kurumlara, girişimcilere ve bireylere; psikoloji temelli yaratıcılık, yapay zeka ve gelişim danışmanlığı.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2>Besim Ogelman Kimdir?</h2>
+                <p>Hacettepe Üniversitesi Psikoloji mezunu olarak başladığım kariyer yolculuğumda, insan zihninin çalışma prensiplerini kurumsal dünyanın dinamikleriyle birleştirdim. 40.000 saatin üzerindeki eğitim tecrübemle, sadece "anlatan" değil, "dönüştüren" bir rehber olmayı amaçladım.</p>
+                <p>Endüstriyel psikoloji, İnsan Kaynakları ve Proje Yönetimi alanlarındaki birikimimi; bugün yapay zeka okuryazarlığı ve inovatif düşünme teknikleriyle harmanlıyorum. Türkiye'nin dört bir yanında, KOBİ'lerden kamu kurumlarına, DENEYAP atölyelerinden uluslararası projelere kadar geniş bir yelpazede değer üretiyorum.</p>
+            </div>
+            <div class="about-img-placeholder">
+                <img src="Fotoğraflar/Besim 1.jpg" alt="Besim Ogelman Portresi">
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-topics" style="background-color: var(--secondary-bg);">
+        <div class="container">
+            <h2>Öne Çıkan Konular</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <h3>İnovasyon Stratejisi</h3>
+                    <p>Pazarın dinamiklerine uyum sağlayan ve geleceği şekillendiren sürdürülebilir inovasyon yol haritaları oluşturma sürecidir.</p>
+                    <img src="Fotoğraflar/İnovasyon Stratejisi.png" alt="İnovasyon Stratejisi">
+                </div>
+                <div class="featured-card">
+                    <h3>Açık Hava Eğitimleri</h3>
+                    <p>Takım çalışmasını, liderlik becerilerini ve problem çözme yeteneklerini doğa ile iç içe, deneyimsel öğrenme metotlarıyla geliştiren programlar.</p>
+                    <img src="Fotoğraflar/Açık hava.png" alt="Açık Hava Eğitimleri">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="english-section">
+        <div class="container">
+            <h2>International Profile</h2>
+            <p><strong>Besim Ogelman | Psychologist & Innovation Consultant</strong></p>
+            <br>
+            <p>With a background in Psychology from Hacettepe University and over 40,000 hours of training experience, I bridge the gap between human behavior and organizational success. I am the developer of the FEBEFEK® Creativity Model and the sole expert applying specific debriefing methodologies in Turkey.</p>
+            <br>
+            <p><strong>Core Competencies:</strong> AI Literacy, Creativity & Innovation, HR Consultancy, Stress Management, and Entrepreneurship Mentoring. I have led projects for EU funds, UN agencies, and major corporations, helping over 35,000 individuals unlock their potential.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container" style="text-align: center;">
+            <h2>İletişime Geçin</h2>
+            <p>Projeleriniz, eğitim talepleriniz veya danışmanlık ihtiyaçlarınız için:</p>
+            <br>
+            <div class="contact-links">
+                <p><a href="mailto:besimogelman@gmail.com">E-posta Gönderin</a></p>
+                <p>besimogelman@gmail.com</p>
+                <br>
+                <p>Sosyal Medya: 
+                   <a href="#">LinkedIn</a> &nbsp;|&nbsp; 
+                   <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
